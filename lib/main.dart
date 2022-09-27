@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_transform_animation/utils/scroll_glow.dart';
 
 import 'components/bottom_navigation_bar.dart';
 import 'screens/home_screen.dart';
-import 'utils/scroll_mouse.dart';
+import 'utils/scroll_behaviors.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,13 +15,6 @@ class MyApp extends StatelessWidget {
       scrollBehavior: AppScrollBehavior(),
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      builder: (context, child) {
-        return ScrollConfiguration(
-          //! disable scroll glow for entire app
-          behavior: NoScrollGlowBehavior(),
-          child: child!,
-        );
-      },
       home: const Scaffold(
         backgroundColor: Colors.white,
         bottomNavigationBar: CustomBottomNavigationBar(),
