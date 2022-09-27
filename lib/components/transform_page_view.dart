@@ -38,6 +38,7 @@ class _TransformPageViewWidgetState extends State<TransformPageViewWidget> {
 
     return PageView.builder(
       controller: pageController,
+      itemCount: pageItems.length,
       itemBuilder: (context, index) {
         double scale = max(viewportFraction,
             1 - (pageOffset! - index).abs() + viewportFraction);
@@ -81,12 +82,20 @@ class _TransformPageViewWidgetState extends State<TransformPageViewWidget> {
                       child: AnimatedOpacity(
                         opacity: angleY == 0 ? 1 : 0,
                         duration: const Duration(milliseconds: 300),
-                        curve: Curves.ease,
+                        curve: Curves.easeOut,
                         child: Container(
                           padding: const EdgeInsets.only(
                               top: 15, bottom: 30, left: 20, right: 20),
                           decoration: BoxDecoration(
-                              color: Colors.black.withOpacity(0.3)),
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.black.withOpacity(0.05),
+                                Colors.black.withOpacity(0.8),
+                              ],
+                            ),
+                          ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -94,7 +103,7 @@ class _TransformPageViewWidgetState extends State<TransformPageViewWidget> {
                                 pageItems[index].title!,
                                 style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 27,
+                                  fontSize: 23,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1.2,
                                 ),
@@ -103,7 +112,7 @@ class _TransformPageViewWidgetState extends State<TransformPageViewWidget> {
                                 pageItems[index].caption!,
                                 style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 17,
+                                  fontSize: 15,
                                 ),
                               ),
                             ],
@@ -118,7 +127,6 @@ class _TransformPageViewWidgetState extends State<TransformPageViewWidget> {
           ),
         );
       },
-      itemCount: pageItems.length,
     );
   }
 }
