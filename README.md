@@ -1,16 +1,18 @@
-# travel_app_transform_animation
+# travel_app_transform_animation App
 
-A new Flutter project.
+This is a simple app that represents transform animation in Pageview widget using Flutter. 
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+I just used [this](https://dribbble.com/shots/6574276--8-Travel-Guides-Experience-Freebie) design to make this app.
+<center>
 
-A few resources to get you started if this is your first Flutter project:
+![ui design](https://user-images.githubusercontent.com/31685655/192453977-d862265e-4f19-490e-864d-ffa1b08b6cf9.gif)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+</center>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Screenshots:
+
+<img src="https://user-images.githubusercontent.com/31685655/192471548-f657b65e-4545-49b6-ad0c-353c095c99d2.gif" alt="screenshot 1" width="400"/>
+
+### App is not complete, so stay tuned! 🙂💙
